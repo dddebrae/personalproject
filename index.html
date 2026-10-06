@@ -68,21 +68,29 @@ h2.cmd:after{content:"▍";color:var(--acc);margin-left:2px;animation:bl 1s step
 .ani .it:before{transform:scale(0);transition:transform .7s cubic-bezier(.3,1.7,.5,1) .3s}.ani .it.in:before{transform:scale(1)}
 .ani .li .lg{transform:scale(0) rotate(-45deg);transition:transform .8s cubic-bezier(.3,1.6,.5,1) .25s}.ani .li.in .lg{transform:none}
 .ani .sk i{transform:scale(0);transition:transform .6s cubic-bezier(.3,1.7,.5,1) .35s}.ani .sk span.in i{transform:none}
+nav{flex-wrap:nowrap;align-items:center}nav .lo{font-weight:600;color:var(--fg);margin-right:18px}.lk{flex:1;display:flex;gap:0;white-space:nowrap}.nr{display:flex;gap:8px;align-items:center}
+#mb,#th .ic{display:none}body{overflow-x:clip}
+@media (max-width:820px){
+ nav{padding:10px 4vw;position:sticky}nav .lo{margin-right:0;flex:1}
+ #mb{display:inline-block}#th .tx{display:none}#th .ic{display:inline}
+ .lk{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 4vw 14px;max-height:75vh;overflow:auto;backdrop-filter:blur(14px)}
+ .lk.open{display:flex}.lk a{margin:0;padding:12px 4px;font-size:17px;border-bottom:1px solid var(--line);color:var(--fg);opacity:1}
+}
 .rv{opacity:0;transform:translateY(18px);transition:.7s}.rv.in{opacity:1;transform:none}
 @media (hover:hover) and (pointer:fine){body,a,button{cursor:none}#gl{cursor:none}#cur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:var(--acc);pointer-events:none;z-index:99;transform:translate(-50%,-50%);transition:width .2s,height .2s,opacity .2s}#cur.h{width:48px;height:48px;opacity:.28}}
 @media (hover:none){#cur{display:none}}
 @media (prefers-reduced-motion:reduce){.tick .tr,.dot{animation:none}}
 </style></head><body>
 <canvas id="stars"></canvas><div id="cur"></div>
-<nav><div><a href="#top">debra</a><a href="#story">story</a><a href="#map">places</a><a href="#edu">education</a><a href="#work">experiences</a><a href="#projects">projects</a><a href="#wins">awards</a><a href="#market">market</a><a href="#contact">contact</a></div><button id="th">light / dark</button></nav>
+<nav><a class="lo" href="#top">debra</a><div class="lk" id="lk"><a href="#story">story</a><a href="#map">places</a><a href="#edu">education</a><a href="#work">experiences</a><a href="#projects">projects</a><a href="#wins">awards</a><a href="#market">market</a><a href="#contact">contact</a><a href="Debra_Erdenemandakh_Resume.pdf" target="_blank" rel="noopener">resume ↗</a></div><div class="nr"><button id="th"><span class="tx">light / dark</span><span class="ic">◐</span></button><button id="mb" aria-label="Menu" aria-expanded="false">Menu</button></div></nav>
 <main>
 <section class="hero" id="top">
  <h2 class="cmd" style="text-align:center;margin-bottom:14px">debra@erdene:~$ ./launch --portfolio</h2>
- <div class="badge">Alpha Seeker · Intelligence Enthusiast · Data Detective · Market Obsessed</div>
+ <div class="badge">Product · Investing · Cybersecurity</div>
  <h1 class="nm" id="nm"><span class="w">Debra</span><span class="w">Erdenemandakh</span></h1>
- <p class="lead">On a voyage to find the next big thing. I hunt for alpha at the intersection of markets, national intelligence, and data.</p>
- <a class="btn" href="#story">Read my story ↗</a><a class="btn" href="mailto:erdenema@usc.edu">Say hi</a><a class="btn" href="#market">Watchlist ↓</a>
- <div class="status hud"><div><b>status</b> <span class="dot"></span>online</div><div><b>loc</b> Los Angeles</div><div><b>time</b> <span id="clk">--:--</span></div><div><b>role</b> USC MSF + BA '27</div><div><b>focus</b> markets, national intelligence, data</div></div>
+ <p class="lead">I build products, research companies, and work on cybersecurity problems. Here’s a collection of what I’ve done and what I’m learning.</p>
+ <a class="btn" href="#story">About me</a><a class="btn" href="#projects">Projects</a><a class="btn" href="#market">Market research</a>
+ <div class="status hud"><div><b>status</b> <span class="dot"></span>online</div><div><b>loc</b> Los Angeles</div><div><b>time</b> <span id="clk">--:--</span></div><div><b>role</b> USC MSF + BA '27</div><div style="grid-column:1/-1"><b>focus</b> defense, finance, investing, markets, national intelligence, data</div></div>
 </section>
 
 <section id="story" class="story rv"><h2 class="cmd">debra@erdene:~/story$ cat mission_brief.md</h2><h3 class="t">From a yurt to Wall Street.</h3>
@@ -100,7 +108,7 @@ h2.cmd:after{content:"▍";color:var(--acc);margin-left:2px;animation:bl 1s step
 <section id="edu" class="rv"><h2 class="cmd">debra@erdene:~/education$ ls -la</h2><h3 class="t">Where I studied</h3>
 <div class="tl">
  <div class="it"><div class="d">High school</div><h4>Skipped sophomore year</h4><p>Graduated a year early.</p></div>
- <div class="it"><div class="d">Aug 2022 – May 2027</div><h4>USC · BA, Intelligence &amp; Cyber Operations</h4><p>QuestBridge full-ride scholar. GPA 3.7. Where Hackers to CEOs turned me toward breaking code.</p></div>
+ <div class="it"><div class="d">Aug 2022 – May 2027</div><h4>USC · BA, Intelligence &amp; Cyber Operations</h4><p>QuestBridge full-ride scholar. GPA 3.6. Where Hackers to CEOs turned me toward breaking code.</p></div>
  <div class="it"><div class="d">Aug 2025 – May 2027</div><h4>USC · MSF, Progressive Degree Program</h4><p>Finance on top of security.</p></div>
 </div>
 <h2 class="cmd" style="margin-top:34px">debra@erdene:~/education/coursework$ ls</h2>
@@ -138,6 +146,7 @@ h2.cmd:after{content:"▍";color:var(--acc);margin-left:2px;animation:bl 1s step
 </section>
 
 <section id="contact" class="rv"><h2 class="cmd">debra@erdene:~/contact$ cat comms.yml</h2><h3 class="t">Open a channel.</h3>
+ <div class="li"><b>Resume</b><span><a href="Debra_Erdenemandakh_Resume.pdf" target="_blank" rel="noopener">View my resume ↗</a></span></div>
  <div class="li"><b>Email</b><span><a href="mailto:erdenema@usc.edu">erdenema@usc.edu</a></span></div>
  <div class="li"><b>LinkedIn</b><span><a href="https://linkedin.com/in/debraerdene">linkedin.com/in/debraerdene</a></span></div>
  <div class="li"><b>X</b><span><a href="https://x.com/unicornjazz1">@unicornjazz1</a></span></div>
@@ -188,5 +197,9 @@ document.querySelectorAll('h3.t,.story p,.story q,.lead,.li b,.li span,.it h4,.i
 /* pop-in for circles, pills, rows */
 (function(){if(RM)return;R.classList.add('ani');var P=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');P.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.cw a,.sk span,.tags .tg,.it,.li,.gw,.chips button,.status,.tick').forEach(function(el){var sib=[].slice.call(el.parentNode.children),i=sib.indexOf(el);el.style.setProperty('--d',Math.min(i*70,700)+'ms');el.classList.add('pop');P.observe(el)})})();
+
+(function(){var b=document.getElementById('mb'),l=document.getElementById('lk');function set(o){l.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.textContent=o?'Close':'Menu'}
+b.onclick=function(){set(!l.classList.contains('open'))};l.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});addEventListener('resize',function(){if(innerWidth>820)set(false)})})();
+
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.08});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 </script></body></html>
